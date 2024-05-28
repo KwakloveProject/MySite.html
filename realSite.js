@@ -15,7 +15,7 @@ function createDiv2(event)
 
     if(myWindow === null)
     {
-        myWindow =window.open("./realSite(Home).html","_top");
+        myWindow =window.open("./index.html","_top");
         //가져올 창의 html파일 이름, 그냥 윈도우,사이즈,lefr, right,width등등
 
         event.preventDefault();//이게 있어야 원도우 안 없어짐
