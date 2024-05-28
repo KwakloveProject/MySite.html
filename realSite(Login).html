@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./realSite2.css">
+  <link rel="stylesheet" href="login.css">
+  <script src="./login.js" defer></script>
+  <script src="./realSite.js" defer></script>
+</head>
+  
+<body>
+  <header>
+    <h1 style="margin-left: 100px; color: black;">사이트 바로가기</h1>
+    <ul>
+      <li class="menu"><a href="javascript:createDiv2(event)" class="dropbtn">Home</a></li>
+      <li class="menu"><a href="#sitemap" class="dropbtn">Sitemap</a></li>
+    </ul>
+  </header>
+  <nav>
+    <ul>
+      <li class="menu">
+        <a href="javascript:createDiv2(event)" class="dropbtn">Home</a>
+      </li>
+      <li class="menu">
+        <a href="#gallery" class="dropbtn">gallery</a>
+      </li>
+      <li class="menu">
+        <a href="#board" class="dropbtn">게시판</a>
+        <div class="content">
+          <a href="javascript:createDiv4(event)">자유 게시판</a>
+          <a href="#">문의 게시판</a>
+          <a href="#">건의 게시판</a>
+        </div>
+      </li>
+      <li class="menu">
+        <a href="#" class="dropbtn">멀티미디어</a>
+        <div class="content">
+          <a href="#">음악 듣기</a>
+          <a href="#">동영상 보기</a>
+        </div>
+      </li>
+      <li class="menu">
+        <a href="#" class="dropbtn">상품구매</a>
+      </li>
+      <li class="menu">
+        <a href="#" class="dropbtn">찾아오시는길</a>
+      </li>
+      <li class="member">
+        <a href="javascript:createDiv3(event)" class="dropbtn">회원가입</a>
+      </li>
+      <li class="member">
+        <a href="javascript:createDiv(event)" class="dropbtn">로그인</a>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <div style="border: 1px solid beige;margin-top: 200px;">
+    
+    <div class="login" style="border: 1px solid beige; width: 250px; margin: 0 auto;">
+        
+        <h1 style="text-align: center;">로그인</h1>
+          <div>
+            <!-- 상단 -->
+            <input type="radio" name="registered" id="registered">
+            <label for="registered">회원</label>
+            <input type="radio" name="registered" id="registered">
+            <label for="registered">비회원(주문조회)</label>
+          </div>
+          <!-- 중단 -->
+          <form action="#" method="post">
+            <div style="display: flex;">
+              <div>
+                <input type="text" name="loginId" id="loginId" placeholder="아이디" style="color: gray; height: 20px;" ><br>
+                <input type="text" name="loginPwd" id="loginPwd" placeholder="비밀번호" style="color: gray;height: 20px;">
+              </div>
+              <div>
+                <button type="submit" id="submit" onclick="registeredCheck(event)" style="height: 50px;">로그인</button>
+              </div>
+            </div>
+          </form>
+
+ 
+        <div class="box3">
+          <span><input type="checkbox">
+            <label for="checkbox">아이디저장</label></span>
+          <span><a href="#">OTP 로그인</a></span>
+        </div>
+        <!-- 하단 -->
+        <div>
+          <input type="button" value="회원가입" style="color: gray;">
+          <input type="button" value="아이디 찾기" style="color: gray;">
+          <input type="button" value="비밀번호 찾기" style="color: gray;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer content1">
+      <a href="">다운로드</a>
+      <a href="">개인정보처리방침</a>
+      <a href="">저작권지침및신고</a>
+      <a href="">이메일무단수집거부</a>
+    </div>
+    <div class="footer content2">
+      <p>왕십리캠퍼스 : 서울시 성동구 무학로2길 54 신방빌딩 4,5층 tel:12-345-7890</p>
+      <p>Copyright <span>ⓒ</span> 2018 mrhi, Inc. All right reserved. Contact webmaster for more information. 23-455-1234</p>
+    </div>
+  </footer>
+</body>
+
+</html>

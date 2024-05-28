@@ -1,0 +1,42 @@
+        .ulstye
+        {
+            border: 1px solid  rgb(118,118,118);
+            background-color:  rgb(118,118,118); 
+            filter: brightness(180%);
+            padding: 8px 18px;
+        }
+        form
+        {
+            border: 1px solid beige;
+            display: flex;
+            justify-content:space-between;
+            width: 1200px;
+            margin-top: 2px;
+        }
+        table, td,th
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-right: 1px beige;
+            border-left: 1px beige;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        table
+        {
+            width: 1200px;
+            margin-top: 5px;
+        }
+        /* 보기 박스, 검색박스 ,버튼 , 정렬기준버튼 크기 조절 */
+        select,button,input
+        {
+            padding: 8px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        li:hover
+        {
+            color: rgb(3,199,90) ;
+        }
+        

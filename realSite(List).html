@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="realSite(List).css">
+        <script src="realSite(List).js"></script>
+        <link rel="stylesheet" href="./realSite2.css"></head>
+        <script src="./realSite.js" defer></script>
+
+  <script src="./realSite.js" defer></script>
+</head>
+<body  onload="write()">
+
+    <header>
+        <h1 style="margin-left: 100px; color: black;">사이트 바로가기</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li class="menu">
+                <a href="javascript:createDiv2(event)" class="dropbtn">Home</a>
+            </li>
+            <li class="menu">
+                <a href="#gallery" class="dropbtn">gallery</a>
+            </li>
+            <li class="menu">
+                <a href="#board" class="dropbtn">게시판</a>
+                <div class="content">
+                    <a href="javascript:createDiv4(event)">자유 게시판</a>
+                    <a href="#">문의 게시판</a>
+                    <a href="#">건의 게시판</a>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="#" class="dropbtn">멀티미디어</a>
+                <div class="content">
+                    <a href="#">음악 듣기</a>
+                    <a href="#">동영상 보기</a>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="#" class="dropbtn">상품구매</a>
+            </li>
+            <li class="menu">
+                <a href="#" class="dropbtn">찾아오시는길</a>
+            </li>
+            <li class="member">
+                <a href="javascript:createDiv3(event)" class="dropbtn">회원가입</a>
+            </li>
+            <li class="member">
+                <a href="javascript:createDiv(event)" class="dropbtn" >로그인</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div style="display: flex; justify-content: center;margin-top: 5%;" >
+            
+            <div style="border: 1px solid white; width: 200px;">
+                <h1>국민소통</h1>
+                <hr>
+                <span><b>국민참여</b></span>
+                <ul class="ulstye">
+                    <li> 이벤트</li>
+                    <li> 칭찬합시다</li>
+                    <li> 궁금합니다</li>
+                    <li> 제안합니다</li>
+                    <li> 국민신고방(불법산행)</li>
+                </ul>
+                <br>
+                <span><b>혁신제안</b></span> 
+                <br>
+                <ul class="ulstye">
+                    <li>기업성장응답센터</li>
+                    <li>사회적가치, 혁신 우수차례</li>
+                </ul>
+                <br>        
+                <span><b>클린신고센터</b></span>   
+                <br>        
+                <ul class="ulstye">
+                    <li>공익신고</li>
+                    <li>소극행정신고</li>
+                    <li>갑질신고</li>
+                    <li>청탁금지법 위반신고</li>
+                    <li>사이버감사실</li>
+                    <li>예산낭비신고</li>
+                    <li>갑질행위 공개</li>
+                </ul>
+            </div>
+            <div style="margin-left: 80px;">
+                
+                <h1 style="color:rgb(3,199,90);">칭찬합시다</h1>
+                <hr>
+                
+                <form action="#" method="post">
+                    <subform style="border: 1px solid white;">
+                        <select name="count">
+                            <option value="1">10개씩</option>
+                            <option value="2">15개씩</option>
+                        </select>
+                        <button type="button">보기</button>
+                    </subform>
+                    <subform style="border: 1px solid white;">
+                        <select name="title">
+                            <option value="3">제목</option>
+                            <option value="4">등록일</option>
+                        </select>
+                        <input type="text" id="select" name="select" style="width: 80px;">
+                        <button type="button">검색</button>
+                    </subform>
+                </form>
+                <table>
+                    <tr>
+                    <th>번호</th>
+                    <th>공원명</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>등록일</th>
+                </tr>
+                <tr>
+                    <td id="number"></td>
+                    <td id="parkName"></td>
+                    <td id="title"></td>
+                    <td id="user"></td>
+                    <td id="count"></td>
+                    <td id="createDate"></td>
+                </tr>
+                <tr>
+                    <td id="number"></td>
+                    <td id="parkName"></td>
+                    <td id="title"></td>
+                    <td id="user"></td>
+                    <td id="count"></td>
+                    <td id="createDate"></td>
+                </tr>
+                <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+            <td id="parkName"></td>
+            <td id="title"></td>
+            <td id="user"></td>
+            <td id="count"></td>
+            <td id="createDate"></td>
+        </tr>
+    </table>
+    <p  style="margin-left: 400px; margin-top: 30px;">1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9 &nbsp; 10</p>
+</div>
+</div>
+</section>
+<footer>
+    <div class="footer content1">
+        <a href="">다운로드</a>
+        <a href="">개인정보처리방침</a>
+        <a href="">저작권지침및신고</a>
+        <a href="">이메일무단수집거부</a>
+    </div>
+    <div class="footer content2">
+        <p>왕십리캠퍼스 : 서울시 성동구 무학로2길 54 신방빌딩 4,5층 tel:12-345-7890</p>
+        <p>Copyright <span>ⓒ</span> 2018 mrhi, Inc. All right reserved. Contact webmaster for more information. 23-455-1234</p>
+    </div>
+</footer>
+</body>
+</html>

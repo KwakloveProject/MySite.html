@@ -1,0 +1,18 @@
+.user1
+    {
+        width: 93.5%;
+        padding: 3%;
+    }
+    .user3
+    {
+        width: 100%;
+        padding: 3%;
+    }
+   form
+   {
+    border: 1px solid white;
+    width: 505px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   }
