@@ -18,16 +18,16 @@
     .img
     {
         border: 2px solid rgb(194,194,194);
-        border-radius: 8px;
-        width: 80%; 
-        height: 465px;
+        border-radius: 10px;
+        width: 1200px; 
+        height: 650px;
     }
   </style>
 </head>
 
 <body onload="call_js()" >
   <header>
-    <h1 style="margin-left: 100px; color: black;">사이트 바로가기</h1>
+    <h1 style="margin-left: 100px; color: black;">좋아하는회사 바로가기</h1><span>Home, 게시판-자유게시판, 로그인, 회원가입만 구현 해놓았습니다. 로그인이랑 회원가입은 스프링부트로 해봤지만 html로는 폼만 만들어봤습니다.</span>
     <ul>
       <li class="menu"><a href="javascript:createDiv2(event)" class="dropbtn">Home</a></li>
       <li class="menu"><a href="#sitemap" class="dropbtn">Sitemap</a></li>
@@ -72,28 +72,29 @@
   </nav>
 
 <section>
+  <div class="section">
     <div class="slideshow">
-      <div class="slideshow_slides">    
-        <a href="https://www.naver.com/" target="_blank"><img src="화면 캡처 2024-05-02 135556.png" class="img" alt="slide1" /></a>
-        <a href="https://www.daum.net/" target="_blank"><img src="화면 캡처 2024-05-02 135540.png" class="img" alt="slide1" /></a>
-        <a href="https://www.google.co.kr/" target="_blank"><img src="화면 캡처 2024-05-02 135517.png" class="img" alt="slide1" /></a>
-        <a href="https://www.nate.com/" target="_blank"><img src="image.png" class="img" alt="slide1" /></a>
+      <div class="slideshow_slides">
+        <a href="http://www.eseict.com/business/smart-city/introduction"><img src="화면 캡처 2024-06-04 103944.png" class="img" alt="slide1"></a>
+        <a href="https://www.jmrobotics.co.kr/"><img src="화면 캡처 2024-06-04 094602.png" class="img" alt="slide2"></a>
+        <a href="http://www.ytins.co.kr/"><img src="화면 캡처 2024-06-04 101516.png" class="img" alt="slide3"></a>
       </div>
       <div class="slideshow_nav">
-      <a href="#" class="prev"
-      ><i class="fa-solid fa-circle-chevron-left" style="color: black; opacity: 0.2 ;"></i
-      ></a>
-      <a href="#" class="next"
-      ><i class="fa-solid fa-circle-chevron-right"style="color: black; opacity: 0.2 "></i
-        ></a>
+        <a href="" class="prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
+        <a href="" class="next"><i class="fa-solid fa-circle-chevron-right"></i></a>
       </div>
       <div class="indicator">
         <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
         <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
         <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
-        <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
       </div>
     </div>
+
+    <div class="category">
+      <a href=""><img src="./img/category.png" alt="" width="100%"></a>
+
+    </div>
+  </div>
   </section>
 
 

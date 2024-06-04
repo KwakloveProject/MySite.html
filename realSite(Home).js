@@ -1,85 +1,86 @@
-function call_js(){
-    //화면객체참조변수지정
-    let slideshow = document.querySelector('.slideshow');
-    let slideshowSlides = document.querySelector('.slideshow_slides');
-    let slides = document.querySelectorAll('.slideshow_slides a');
-    let prev = document.querySelector('.prev');
-    let next = document.querySelector('.next');
-    let indicators = document.querySelectorAll('.indicator a');
-    let currentIndex = 0; 
-    let timer ="";
-    let slideCount = slides.length; 
-    
-    for(let i=0; i < slides.length; i++ ){
-      let newLeft = i*100+'%';
-      slides[i].style.left = newLeft;
-    }
-    
-    function gotoSlide(index){
-      currentIndex = index;
-      let newLeft = index * -100 + '%';
-      slideshowSlides.style.left = newLeft;
-      indicators.forEach((obj)=>{
-        obj.classList.remove('active'); 
-      }); 
-      indicators[index].classList.add('active');
-    }
-    
-    gotoSlide(0);
-    
-    //3초마다 함수를 부른다.
-    function startTimer(){
-      timer = setInterval(function(){
-        let nextIndex = (currentIndex + 1) % slideCount;
-        gotoSlide(nextIndex);
-      }, 3000)
-    }
-    startTimer(); 
-    
-    // 마우스포인터 slideshowSlides 들어오면 타이머를 멈춘다. 
-    slideshowSlides.addEventListener('mouseenter',()=>{
-      clearInterval(timer);
-    })
-    slideshowSlides.addEventListener('mouseleave',function(){
-      startTimer(); 
-    })
-    prev.addEventListener('mouseenter',()=>{
-      clearInterval(timer);
-    })
-    next.addEventListener('mouseenter',()=>{
-      clearInterval(timer);
-    })
-    //prev , next 이벤트설정
-    prev.addEventListener('click',(e)=>{
-      e.preventDefault(); //a tag 가지고 기본기능 막는다.
-      currentIndex = currentIndex -1; 
-      if(currentIndex < 0){
-        currentIndex = 3;
-      }
-      gotoSlide(currentIndex);
+//콜백함수 (onLoad call back funct)
+function call_js() {
+  //ui객체참조변수 선언
+  let slideshow = document.querySelector(".slideshow");
+  let slideshow_slides = document.querySelector(".slideshow_slides");
+  //<a href="#"><img></a> ui객체배열
+  let slides = document.querySelectorAll(".slideshow_slides a");
+  let prev = document.querySelector(".prev");
+  let next = document.querySelector(".next");
+  let indicators = document.querySelectorAll(".indicator a")
+  //회전목마 현재위치값, 시간설정, 슬라이드 수
+  let currentIndex = 0;
+  let timer = null;
+  let slideCount = slides.length;
+
+  //회전목마 이미지를 우측으로 배치시켜준다.
+  for (let i = 0; i < slides.length; i++) {
+    let newLeft = i * 100 + '%';
+    slides[i].style.left = newLeft;
+  }
+  //회전목마를 움직인다.() slideshow_slides 왼쪽으로 -100% 이동
+  function gotoSlide(index) {
+    currentIndex = index;
+    let newLeft = index * -100 + '%';
+    slideshow_slides.style.left = newLeft;
+    indicators.forEach((e) => {
+      e.classList.remove("active");
     });
-    
-    next.addEventListener('click',(e)=>{
-      e.preventDefault(); //a tag 가지고 기본기능 막는다.
-      currentIndex = currentIndex + 1; 
-      if(currentIndex > 3){
-        currentIndex = 0;
-      }
-      gotoSlide(currentIndex);
+    // for (let i = 0; i < indicators.length; i++) {
+    //   indicators[i].classList.remove("active");
+    // }
+    indicators[currentIndex].classList.add("active");
+  }
+  //0번부터 3번까지 3초간 gotoSlide를 불러준다.
+  gotoSlide(0);
+  //3초간
+  function startTimer() {
+    timer = setInterval(() => {
+      currentIndex += 1;
+      let index = currentIndex % slideCount;
+      gotoSlide(index)
+    }, 3000);
+  }
+  startTimer();
+
+  //이벤트처리 
+  slideshow_slides.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  slideshow_slides.addEventListener("mouseleave", function () {
+    startTimer();
+  });
+  prev.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  next.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  prev.addEventListener("click", function (e) {
+    e.preventDefault(); // atag 기본기능을 막는다
+    currentIndex -= 1;
+    if (currentIndex < 0) {
+      currentIndex = slideCount - 1;
+    }
+    gotoSlide(currentIndex);
+  });
+  next.addEventListener("click", function (e) {
+    e.preventDefault();
+    currentIndex += 1;
+    if (currentIndex > slideCount - 1) {
+      currentIndex = 0;
+    }
+    gotoSlide(currentIndex);
+  });
+  indicators.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      clearInterval(timer);
     });
-    
-    //indicator click 해당화면으로이동
-    indicators.forEach((obj)=>{
-      obj.addEventListener('mouseenter',()=>{
-        clearInterval(timer);
-      });
-    }); 
-    
-    for(let i=0; i<indicators.length; i++){
-      indicators[i].addEventListener('click',(e)=>{
-        e.preventDefault(); 
-        gotoSlide(i);
-      });
-    }
-    
-    }
+  });
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      gotoSlide(i);
+    });
+  }
+}

@@ -2,7 +2,7 @@
 /* slide show */
 .slideshow {
   z-index: 5;
-  height: 465px;
+  height: 485px;
   min-width: 960px;
   position: relative;
   /* border: 1px solid red; */

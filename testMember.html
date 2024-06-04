@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="realSite(MemberShip).css">
+<script src="./realSite(JoinMemberShip).js" defer></script>  
+</head>
+<body>
+   
+
+    <section style="height: 770px;">
+      <form action="insert.jsp" method="post">
+        <h1 style="text-align: center;" >회원가입</h1>
+        <br>
+    <div style="border: 1px solid white;border-radius: 2px; width: 100%; ">
+        <div style="border: 1px solid white; display: flex;">
+            <input type="text" class="user1" name="userid" id="userId" onkeyup="userIdCheck()"placeholder="* 아이디" required> 
+            <input type="button" value="중복확인" onClick="idCheck(this.form.id.value)"style="padding:10px;"/>
+        </div>
+       <br>
+       <span id="userIdInfo" style="color: red;"></span> 
+       <br>
+      
+       <input type="password" class="user1" name="userpw" id="userPW" onkeyup="userPWCheck()"  placeholder="* 비밀번호" required> <br>
+       <span id="userPWInfo" style="color: red;"></span> 
+       <br>
+       <input type="email" class="user1" name="usermail" id="userEmail" onkeyup="userEmailCheck()" placeholder="* 이메일"> <br>
+       <span id="userEmailInfo" style="color: red;"></span> 
+       <br>
+    </div>
+    <div style="border: 1px solid white;border-radius: 2px; width: 100%; ">
+  
+    <input type="text" name="username" id="userName" class="user1" onkeyup="userNameCheck()"placeholder="* 이름" required> <br>
+    <span id="userNameInfo" style="color: red;"></span><br>
+  
+    <input type="text" name="userbirth" id="userBirth" class="user1" onkeyup="userBirthCheck()"placeholder="* 생년월일 8자리" required> <br>
+    <span id="userBirthInfo" style="color: red;"></span> 
+  
+    <select name="userPhone" id="userPhone" class="user3" onkeyup="userPhoneCheck()" placeholder="통신사 선택">
+        <option value="1">SKT</option>
+        <option value="2">KT</option>
+        <option value="3">LG U+</option>
+        <option value="4">알뜰폰</option>
+    </select>
+    <span id="userPhoneInfo" style="color: red;"></span> 
+  
+    <div class="user1" style="border: 1px solid rgb(118,118,118);border-radius: 2px; display: flex;" >
+        <input type="radio" name="gender" checked value="1" >남자
+        <input type="radio" name="gender"  value="2">여자
+        <input type="radio" name="nationality" checked value="3" style="margin-left: 48%;" >내국인
+        <input type="radio" name="nationality"  value="4">외국인
+    </div>
+  
+    <input class="user1" type="text" name="userphone" id="userPhoneNum" onkeyup="userPhoneNumCheck()" placeholder="* 휴대전화번호" > <br>
+    <span id="userPhoneNumInfo" style="color: red;"></span> 
+    </div>
+    <br>
+    <div style="border: 1px solid rgb(118,118,118);border-radius: 2px; width: 94.2%; padding: 14.8px;">
+        <input type="checkbox"  name="userConsent" id="userConsent" onkeyup="userConsentCheck()"><b><b style="color:  rgb(3,199,90);">[필수]</b> 인증 약관 전체동의</b>
+    </div>
+    
+    <br>
+    <button type="submit" style="border:1px solid rgb(3,199,90) ; border-radius: 5px; width: 100%; padding: 14.8px;background-color: rgb(3,199,90);color: white;font-size: large;font-weight:900;" onclick="allCheck(event)">인증요청</button>
+    </form>
+  
+    </section>
+    
+  </body>
+  </html>
+  

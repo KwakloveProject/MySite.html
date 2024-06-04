@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./realSite2.css"></head>
+  <script src="./realSite.js" defer></script>
+    <style>
+        table
+        {
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+          <li class="menu"><a href="#home" class="dropbtn">Home</a></li>
+          <li class="menu"><a href="#sitemap" class="dropbtn">Sitemap</a></li>
+        </ul>
+      </header>
+      <nav>
+        <ul>
+          <li class="menu">
+            <a href="#home" class="dropbtn">Home</a>
+          </li>
+          <li class="menu">
+            <a href="#gallery" class="dropbtn">gallery</a>
+          </li>
+          <li class="menu">
+            <a href="#board" class="dropbtn">게시판</a>
+            <div class="content">
+              <a href="#">자유 게시판</a>
+              <a href="#">문의 게시판</a>
+              <a href="#">건의 게시판</a>
+            </div>
+          </li>
+          <li class="menu">
+            <a href="#" class="dropbtn">멀티미디어</a>
+            <div class="content">
+              <a href="#">음악 듣기</a>
+              <a href="#">동영상 보기</a>
+            </div>
+          </li>
+          <li class="menu">
+            <a href="#" class="dropbtn">상품구매</a>
+          </li>
+          <li class="menu">
+            <a href="#" class="dropbtn">찾아오시는길</a>
+          </li>
+          <li class="member">
+            <a href="#" class="dropbtn">회원가입</a>
+          </li>
+          <li class="member">
+            <a href="#" class="dropbtn">로그인</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+    <form name="modifyForm" method="post" action="modifyProc.jsp">
+       <table border="50" style="border-color: burlywood    ; " >
+           <tr>
+               <td colspan="2" align="center">회원 수정 정보 입력</td>
+           </tr>
+           <tr >
+               <td align="right">아이디 :</td>
+               <td><%=vo.getUserid()%></td>
+           </tr>
+           <tr>
+               <td align="right">비밀번호 :</td>
+               <td><input type="password" name="userpw" id="userPW"  value="<%=vo.getUserpw() %>" autocomplete="off"/>
+               <span id="userPWInfo" style="color: red;"></span></td>
+           </tr>
+           <tr>
+               <td align="right">이메일 :</td>
+               <td><input type="text" name="useremail" id="userEmail" value="<%=vo.getUseremail() %>" autocomplete="on"/>
+               <span id="userEmailInfo" style="color: red;"></span></td>
+           </tr>
+           <tr>
+               <td align="right">이름 :</td>
+               <td><input type="text" name="username" id="userName" value="<%=vo.getUsername()%>" autocomplete="on"/>
+               <span id="userNameInfo" style="color: red;"></span></td>
+           </tr>
+           <tr>
+               <td align="right">전화번호 :</td>
+               <td><input type="text" name="userphone" id="userPhoneNum" value="<%=vo.getUserphone() %>" autocomplete="on"/>
+               <span id="userPhoneNumInfo" style="color: red;"></span></td>
+           </tr>
+           <tr>
+               <td colspan="2" align="center">
+                   <button type="button" value="정보수정" onClick="allCheck2()" />정보수정&nbsp;&nbsp;
+                   <button type="button" value="취소" onClick="javascript:window.location='login.jsp'"/>취소
+               </td>
+           </tr>
+       </table>
+   </form>
+      </section>
+    </body>
+    </html>
